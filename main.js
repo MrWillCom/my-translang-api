@@ -1,5 +1,5 @@
-import { Hono } from 'https://deno.land/x/hono@v3.11.7/mod.ts';
-import { cors } from 'https://deno.land/x/hono@v3.11.7/middleware/cors/index.ts';
+import { Hono } from 'jsr:@hono/hono';
+import { cors } from 'jsr:@hono/hono/cors';
 import userAgents from './user-agents.json' with { type: 'json' };
 import languages from './languages.json' with { type: 'json' };
 

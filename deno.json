@@ -8,5 +8,8 @@
   },
   "fmt": {
     "singleQuote": true
+  },
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.7.7"
   }
 }
