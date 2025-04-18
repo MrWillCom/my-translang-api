@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --watch main.js",
+    "debug": "deno run --inspect-brk --allow-net --allow-read --allow-env --watch main.js",
+    "start": "deno run --allow-net --allow-read --allow-env main.js",
+    "fetch-languages": "curl -s 'https://translate.google.com/translate_a/l?client=webapp' > languages.json",
+    "count-languages": "jq '.sl | length' languages.json && jq '.tl | length' languages.json"
+  },
+  "fmt": {
+    "singleQuote": true
+  }
+}
