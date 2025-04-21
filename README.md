@@ -94,7 +94,7 @@ Returns a JSON object with all supported source (`sl`) and target (`tl`) languag
 
 ## Cache
 
-Translations are cached for one week to improve performance and reduce API calls.
+Translations may be cached for one week via `Cache-Control` header to improve performance and reduce API calls.
 
 ## Development
 
@@ -106,3 +106,10 @@ Translations are cached for one week to improve performance and reduce API calls
 - `deno task fetch-languages`: Update the languages.json file from Google Translate
 - `deno task count-languages`: Count the number of supported languages
 
+## Privacy
+
+Please refer to the [Privacy Policy](PRIVACY.md) for details on how data is handled.
+
+## License
+
+[MIT](https://cheeaun.mit-license.org/)
