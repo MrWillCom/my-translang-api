@@ -172,6 +172,20 @@ async function translateText(c, sourceLanguage, targetLanguage, text) {
   const data = await response.json();
   const result = parseTranslateResponse(data);
 
+  if (!result.translated_text) {
+    return c.json(
+      { error: result?.error || 'Translation failed' },
+      500,
+    );
+  } else if (result.translated_text?.trim() === text.trim()) {
+    return c.json(
+      {
+        ...result,
+        error: 'Translation is the same as input text',
+      }
+    );
+  }
+
   // Cache for a week
   c.header('Cache-Control', 'public, max-age=604800');
 
